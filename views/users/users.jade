@@ -9,12 +9,9 @@ block content
                 th id 
                 th User Name 
         tbody(class="table-group-divider")
-            tr
-                td 123asd
-                td Kenny 
-            tr
-                td 1df23asd
-                td diana  
-            tr
-                td 12df3asd
-                td maria 
+            for user,i in userList 
+                tr
+                    td=i
+                    td #{user.id}
+                    td #{user.username} 
+            
