@@ -7,7 +7,13 @@ router.get('/login', function(req, res, next) {
 });
 
 router.post('/login', function(req, res, next) {
-  res.render('index', { title: 'Iniciar Sesión' });
+  let usuario = req.body;
+
+  if (usuario.user=='Kenny') {
+    res.render('index', { title: 'Usuarios', errors:true });
+  }
+
+  res.render('index', { title: 'Iniciar Sesión', errors:true });
 });
 
 module.exports = router;
