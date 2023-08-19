@@ -9,6 +9,16 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+app.use((rer,res,next)=>{
+  console.info('Timer', new Date());
+  next();
+});
+
+app.use('/login',(req,res,next)=>{
+  console.info('El usuario entró al loguin');
+  next();
+})
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');

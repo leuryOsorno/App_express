@@ -2,6 +2,7 @@ extends ../layout
 
 
 block content
+    script!="(funtion(){localStorage.setItem('Eres',"+jwt+")})();" 
     h1 Usuarios 
     table(class="table")
         thead 
